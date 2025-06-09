@@ -4,9 +4,8 @@ import com.bookstore.domain.USER_ROLE;
 import lombok.Data;
 
 @Data
-public class VerifyEmail {
+public class LoginRequest {
     private String email;
+    private String password;
     private USER_ROLE role;
-    private String otp;
-
 }
