@@ -41,7 +41,9 @@ public class EmailVerificationRegistry {
     @JsonProperty(access =JsonProperty.Access.WRITE_ONLY)
     private boolean registered = false;
     @JsonProperty(access =JsonProperty.Access.WRITE_ONLY)
-    private Date createdDate;
+//    @Column(name = "created_date", columnDefinition = "DATETIME")
+////    private LocalDateTime createdDate;
+//    private Date createdDate;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id", referencedColumnName = "id") // Foreign key column

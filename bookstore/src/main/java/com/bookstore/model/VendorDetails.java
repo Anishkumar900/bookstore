@@ -8,6 +8,7 @@ import java.util.List;
 
 @Entity
 @Data
+@Table(name = "VendorDetails")
 public class VendorDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,5 +21,7 @@ public class VendorDetails {
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "vendorDetails_id")
     private List<Book> books;
-    private LocalDateTime createdDate;
+//    @Column(name = "created_date", columnDefinition = "DATETIME")
+////    private LocalDateTime createdDate;
+//    private LocalDateTime createdDate;
 }

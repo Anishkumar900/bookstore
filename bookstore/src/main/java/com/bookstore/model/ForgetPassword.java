@@ -6,6 +6,7 @@ import org.hibernate.engine.internal.Cascade;
 
 @Entity
 @Data
+@Table(name = "ForgetPassword")
 public class ForgetPassword {
 
     @Id

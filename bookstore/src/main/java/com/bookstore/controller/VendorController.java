@@ -33,8 +33,6 @@ public class VendorController {
     public ResponseEntity<?> createBook(@RequestPart("vendor") VendorDetails vendorDetails,
                                         @RequestPart(value = "bookImages", required = false) MultipartFile bookImages)
     {
-//        System.out.println("test");
-//        System.out.println(vendorDetails);
 
         try{
             String imageURL= cloudinaryService.uploadFile(bookImages);

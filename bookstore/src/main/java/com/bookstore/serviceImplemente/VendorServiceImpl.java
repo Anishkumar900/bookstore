@@ -36,7 +36,7 @@ public class VendorServiceImpl implements VendorService {
 
 
         if(existVendorDetails==null){
-            vendorDetails.setCreatedDate(LocalDateTime.now());
+//            vendorDetails.setCreatedDate(LocalDateTime.now());
 
             return vendorRepository.save(vendorDetails);
         }

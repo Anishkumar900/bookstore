@@ -43,7 +43,7 @@ public class EmailVerificationImpl implements EmailVerificationRegistryService {
             user.setEmail(verifyEmail.getEmail());
             user.setOTP(GenerateOTP.generateOTP()); // ✅ OTP generation
             user.setROLE(verifyEmail.getRole());   // Set user role
-            user.setCreatedDate(new Date());       // Set created date
+//            user.setCreatedDate(new Date());       // Set created date
             user.setRegistered(false);
             user.setEmailVerified(false);
             registryRepository.save(user);
@@ -56,7 +56,7 @@ public class EmailVerificationImpl implements EmailVerificationRegistryService {
             user.setEmailVerified(false);
             user.setROLE(verifyEmail.getRole());
             user.setOTP(GenerateOTP.generateOTP());
-            user.setCreatedDate(new Date());
+//            user.setCreatedDate(new Date());
             registryRepository.save(user);
             emailService.sendEmail(verifyEmail.getEmail(), "Email verification OTP","Email Verification!",  user.getOTP());
             return true;
