@@ -84,4 +84,11 @@ public class VendorController {
     public ResponseEntity<?> getAllBook(){
         return ResponseEntity.status(HttpStatus.OK).body(bookService.getAllBook());
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Book> getBookById(@PathVariable Long id) throws Exception {
+        Book book = bookService.getBookById(id); // Throws BookNotFoundException if not found
+        return ResponseEntity.ok(book);
+    }
+
 }
